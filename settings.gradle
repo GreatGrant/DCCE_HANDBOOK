@@ -1,0 +1,2 @@
+rootProject.name = "DCCE HANDBOOK"
+include ':app'
