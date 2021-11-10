@@ -1,0 +1,19 @@
+p.drop_cap::first-letter {
+  float: left;
+  line-height: 35px;
+  font-size: 55px;
+  font-family: Montserrat;
+  color: #7D3C98;
+  border: solid #D5C5EC;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-right: 5px;
+  margin-bottom: -5px;
+}
+
+
+p {
+  font-size: 14px;
+}

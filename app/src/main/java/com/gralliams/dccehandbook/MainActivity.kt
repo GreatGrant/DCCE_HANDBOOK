@@ -11,5 +11,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         var view = binding.root
         setContentView(view)
+
+//        webView.loadUrl("file:///android_asset/index.html")
     }
 }
