@@ -12,8 +12,9 @@
         <activity
             android:name=".SyllabusActivity"
             android:label="@string/title_activity_syllabus"
-            android:theme="@style/Theme.DCCEHANDBOOK.NoActionBar"></activity>
-        <activity android:name=".TagDisplayActivity" />
+            android:theme="@style/Theme.DCCEHANDBOOK.NoActionBar"/>
+        <activity android:name=".TagDisplayActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
