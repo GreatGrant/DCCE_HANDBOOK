@@ -5,7 +5,8 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:paddingBottom="10dp"
-    android:paddingEnd="10dp">
+    android:paddingEnd="8dp"
+    android:paddingStart="8dp">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardTag"
@@ -14,7 +15,8 @@
         android:background="?android:selectableItemBackground"
         android:clickable="true"
         android:elevation="8dp"
-        app:cardCornerRadius="7dp">
+        app:cardCornerRadius="7dp"
+        android:focusable="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
@@ -38,13 +40,14 @@
                 android:layout_gravity="center"
                 android:background="#88000000"
                 android:gravity="center"
-                android:padding="12dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:padding="11dp"
                 android:textColor="@color/white"
-                android:textSize="15sp"
+                android:textSize="13sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="@tools:sample/cities" />
+                tools:text="@tools:sample/full_names" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
