@@ -2,4 +2,7 @@
     <string name="app_name">DCCE HANDBOOK</string>
     <string name="label_syllabus">Syllabus</string>
     <string name="explore">Explore</string>
+    <string name="title_activity_syllabus">SyllabusActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
 </resources>

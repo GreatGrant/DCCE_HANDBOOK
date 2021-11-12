@@ -14,7 +14,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
 
         binding.recyclerTags.layoutManager = GridLayoutManager(this, 3)
-        binding.recyclerTags.adapter  = TagsAdapter(this, Tag.tagObject)
+        binding.recyclerTags.adapter  = TagsAdapter(this, Tag.tagList)
+
+        binding.recyclerSyllabus.layoutManager = GridLayoutManager(this, 2)
+        binding.recyclerSyllabus.adapter  = SyllabusAdapter(this, Syllabus.syallusList)
 //        webView.loadUrl("file:///android_asset/index.html")
     }
 }

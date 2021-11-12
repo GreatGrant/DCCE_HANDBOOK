@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DCCEHANDBOOK">
-        <activity android:name=".TagDisplayActivity"></activity>
+        <activity
+            android:name=".SyllabusActivity"
+            android:label="@string/title_activity_syllabus"
+            android:theme="@style/Theme.DCCEHANDBOOK.NoActionBar"></activity>
+        <activity android:name=".TagDisplayActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

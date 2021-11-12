@@ -5,7 +5,7 @@ class TagModel(var title: String,var image: Int) {
 }
 
 object Tag {
-    var tagObject  = arrayListOf(TagModel("History", R.drawable.atbugate),
+    var tagList  = arrayListOf(TagModel("History", R.drawable.atbugate),
         TagModel("Philosophy",R.drawable.atilport),
         TagModel("Staff List", R.drawable.senateport),
         TagModel("Management",R.drawable.atbugate),
@@ -19,9 +19,9 @@ object Tag {
 class SyllabusModel(var title:String, var imageUrl: Int){}
 
 object Syllabus{
-    var syallusObject = arrayListOf(SyllabusModel("100 Level", R.drawable.undraw_grades_re_j7d6),
-        SyllabusModel("200 Level", R.drawable.undraw_reminders_re_gtyb),
-        SyllabusModel("300 Level", R.drawable.undraw_pair_programming_re_or4x),
+    var syallusList = arrayListOf(SyllabusModel("100 Level", R.drawable.ic_undraw_begin_chat_re_v0lw),
+        SyllabusModel("200 Level", R.drawable.ic_undraw_bibliophile_re_xarc),
+        SyllabusModel("300 Level", R.drawable.ic_undraw_lightbulb_moment_re_ulyo),
                 SyllabusModel("400 Level", R.drawable.undraw_programmer_re_owql),
     SyllabusModel("500 Level", R.drawable.undraw_drone_delivery_re_in95))
 }
