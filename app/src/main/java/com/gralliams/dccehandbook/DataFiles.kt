@@ -15,3 +15,13 @@ object Tag {
         TagModel("Graduation Condition",  R.drawable.atilport),
         TagModel("Exam  Guideline", R.drawable.senateport))
 }
+
+class SyllabusModel(var title:String, var imageUrl: Int){}
+
+object Syllabus{
+    var syallusObject = arrayListOf(SyllabusModel("100 Level", R.drawable.undraw_grades_re_j7d6),
+        SyllabusModel("200 Level", R.drawable.undraw_reminders_re_gtyb),
+        SyllabusModel("300 Level", R.drawable.undraw_pair_programming_re_or4x),
+                SyllabusModel("400 Level", R.drawable.undraw_programmer_re_owql),
+    SyllabusModel("500 Level", R.drawable.undraw_drone_delivery_re_in95))
+}
