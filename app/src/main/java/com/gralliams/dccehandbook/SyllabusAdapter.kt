@@ -39,7 +39,7 @@ class SyllabusAdapter(var context: Context,var syllabusItem: ArrayList<SyllabusM
             itemBinding.apply {
                 syallbusPhoto.setImageResource(syllabusModel.imageUrl)
 
-
+                syllabusDescription.text = syllabusModel.title
                 cardPhoto.setOnClickListener {
                     var intent = Intent(context, SyllabusActivity::class.java)
                     intent.putExtra(TAG_POSITION, tagPosition)

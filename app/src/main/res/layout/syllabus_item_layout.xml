@@ -1,31 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:paddingTop="10dp"
-    android:paddingEnd="10dp"
-    android:paddingStart="10dp">
-
     <com.google.android.material.card.MaterialCardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/cardPhoto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="10dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
         android:clickable="true"
-        app:cardElevation="10dp"
-        android:focusable="true">
+        android:focusable="true"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        android:layout_margin="8dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="false">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
+
 
             <ImageView
                 android:id="@+id/bg"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="30dp"
                 android:src="@drawable/blue_bg"
+                app:layout_constraintBottom_toTopOf="@id/syallbusPhoto"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -36,29 +35,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:background="@color/color_box_background"
-                android:scaleType="centerCrop"
-                app:layout_constraintDimensionRatio="H,1:1"
-                tools:src="@drawable/undraw_pair_programming_re_or4x"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/bg" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:src="@drawable/ic_undraw_begin_chat_re_v0lw" />
 
             <TextView
-                android:id="@+id/syallbusDescription"
+                android:id="@+id/syllabusDescription"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
                 android:text="TextView"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@+id/bg"
-                app:layout_constraintEnd_toEndOf="@+id/bg"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/bg"
                 app:layout_constraintTop_toTopOf="parent" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.card.MaterialCardView>
-
-</FrameLayout>
