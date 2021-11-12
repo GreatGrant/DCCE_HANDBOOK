@@ -51,7 +51,7 @@
             tools:listitem="@layout/tag_item_layout" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerPopularPhotos"
+            android:id="@+id/recyclerSyllabus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"

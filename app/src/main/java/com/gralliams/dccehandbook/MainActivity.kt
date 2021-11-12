@@ -2,6 +2,7 @@ package com.gralliams.dccehandbook
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.GridLayoutManager
 import com.gralliams.dccehandbook.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -12,6 +13,8 @@ class MainActivity : AppCompatActivity() {
         var view = binding.root
         setContentView(view)
 
+        binding.recyclerTags.layoutManager = GridLayoutManager(this, 3)
+        binding.recyclerTags.adapter  = TagsAdapter(this, Tag.tagObject)
 //        webView.loadUrl("file:///android_asset/index.html")
     }
 }
