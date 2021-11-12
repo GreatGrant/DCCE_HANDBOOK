@@ -59,7 +59,7 @@
             app:layout_constraintTop_toBottomOf="@+id/lblPopular"
             app:spanCount="2"
             tools:itemCount="7"
-            tools:listitem="@layout/level_item_layout" />
+            tools:listitem="@layout/syllabus_item_layout" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

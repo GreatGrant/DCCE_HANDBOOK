@@ -1,15 +1,18 @@
 package com.gralliams.dccehandbook
 
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.gralliams.dccehandbook.databinding.SyllabusItemLayoutBinding
 
-class SyllabusAdapter(val onPhotoSelected: (photo: PhotoModel, position: Int) -> Unit) : RecyclerView.Adapter<SyllabusAdapter.SyllabusViewHolder>() {
+class SyllabusAdapter(var context: Context,var syllabusItem: ArrayList<SyllabusModel> ) : RecyclerView.Adapter<SyllabusAdapter.SyllabusViewHolder>() {
 
-    private val photoItems: ArrayList<PhotoModel> = arrayListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SyllabusViewHolder {
-        var binding = PhotoItemLayoutBinding.inflate(
+        var binding = SyllabusItemLayoutBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,
             false
@@ -18,28 +21,29 @@ class SyllabusAdapter(val onPhotoSelected: (photo: PhotoModel, position: Int) ->
     }
 
     override fun onBindViewHolder(holder: SyllabusViewHolder, position: Int) {
-        holder.bind(photoItems[position], position)
+        holder.bind(syllabusItem[position], position)
     }
 
-    override fun getItemCount() = photoItems.size
+    override fun getItemCount() = syllabusItem.size
 
-    fun updateItems(photosList: List<PhotoModel>) {
-        photoItems.clear()
-        photoItems.addAll(photosList)
+    fun updateItems(photosList: List<SyllabusModel>) {
+        syllabusItem.clear()
+        syllabusItem.addAll(photosList)
         notifyDataSetChanged()
     }
 
-    inner class SyllabusViewHolder(val itemBinding: PhotoItemLayoutBinding) : RecyclerView.ViewHolder(itemBinding.root) {
+    inner class SyllabusViewHolder(val itemBinding: SyllabusItemLayoutBinding) : RecyclerView.ViewHolder(itemBinding.root) {
 
-        fun bind(photoModel: PhotoModel, position: Int) {
+        fun bind(syllabusModel: SyllabusModel, position: Int) {
+            var tagPosition = position
             itemBinding.apply {
-                imgPhoto.load(photoModel.urls.thumb) {
-                    placeholder(R.color.color_box_background)
-                    crossfade(true)
-                }
+                syallbusPhoto.setImageResource(syllabusModel.imageUrl)
+
 
                 cardPhoto.setOnClickListener {
-                    onPhotoSelected(photoModel, position)
+                    var intent = Intent(context, SyllabusActivity::class.java)
+                    intent.putExtra(TAG_POSITION, tagPosition)
+                    context.startActivity(intent)
                 }
             }
         }
