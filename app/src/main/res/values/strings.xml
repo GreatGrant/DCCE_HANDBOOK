@@ -5,4 +5,13 @@
     <string name="title_activity_syllabus">SyllabusActivity</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
+    <string name="history">string</string>
+    <string name="philosophy">philospph</string>
+    <string name="exam_guide">exam</string>
+    <string name="management">management</string>
+    <string name="entry_demands">entry</string>
+    <string name="course_duration">course</string>
+    <string name="graduation">grad</string>
+    <string name="grading">grading</string>
+    <string name="staff_list">stafflist</string>
 </resources>

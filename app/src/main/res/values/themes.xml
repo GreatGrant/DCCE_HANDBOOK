@@ -4,8 +4,10 @@
 
     <!-- No Toolbar theme -->
     <style name="Theme.DCCEHANDBOOK.NoActionBar" parent="Theme.DCCEHANDBOOK.Base">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+        <item name="android:windowShowWallpaper">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
     </style>
 
     <!-- Default Theme -->
@@ -46,5 +48,10 @@
 
     <style name="Theme.DCCEHANDBOOK.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+
+    <!-- THIS IS THE MAIN THEME -->
+    <style name="AppTheme.Wallpaper" parent="@style/Theme.AppCompat.Light.NoActionBar">
+
+    </style>
 
 </resources>
