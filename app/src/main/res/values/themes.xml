@@ -4,7 +4,6 @@
 
     <!-- No Toolbar theme -->
     <style name="Theme.DCCEHANDBOOK.NoActionBar" parent="Theme.DCCEHANDBOOK.Base">
-        <item name="android:windowShowWallpaper">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
@@ -28,6 +27,8 @@
         <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
         <!-- Customize your theme here. -->
         <item name="drawerArrowStyle">@style/Theme.DCCEHANDBOOK.Toolbar.DrawerArrowToggle</item>
+        <!-- font       -->
+        <item name="fontFamily">@font/montserrat_regular</item>
 
     </style>
 
@@ -46,12 +47,11 @@
 
     <style name="Theme.DCCEHANDBOOK.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="Theme.DCCEHANDBOOK.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Theme.DCCEHANDBOOK.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
 
-    <!-- THIS IS THE MAIN THEME -->
-    <style name="AppTheme.Wallpaper" parent="@style/Theme.AppCompat.Light.NoActionBar">
 
-    </style>
+
+ 
 
 </resources>

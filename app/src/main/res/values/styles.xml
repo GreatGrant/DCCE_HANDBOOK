@@ -3,5 +3,6 @@
 
     <style name="abhaya">
         <item name="android:fontFamily"> @font/abhaya_libre  </item>
+        <item name="font"> @font/abhaya_libre</item>
     </style>
 </resources>
