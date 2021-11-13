@@ -3,8 +3,8 @@
     <string name="label_syllabus">Syllabus</string>
     <string name="explore">Explore</string>
     <string name="title_activity_syllabus">SyllabusActivity</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_1">FIRST SEMESTER</string>
+    <string name="tab_text_2">SECOND SEMESTER</string>
     <string name="history">string</string>
     <string name="philosophy">philospph</string>
     <string name="exam_guide">exam</string>

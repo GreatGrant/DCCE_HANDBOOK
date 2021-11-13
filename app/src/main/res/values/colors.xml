@@ -8,8 +8,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="color_primary">#138C64</color>
-    <color name="color_primary_dark">#086747</color>
+    <color name="color_primary">@color/purple_700</color>
+    <color name="color_primary_dark">@color/purple_500</color>
     <color name="color_on_primary">#EFEFEF</color>
     <color name="color_secondary">#CDDC39</color>
     <color name="color_secondary_dark">#B2BF30</color>
