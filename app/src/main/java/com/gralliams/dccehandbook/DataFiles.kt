@@ -8,7 +8,7 @@ object Tag {
     var tagList  = arrayListOf(TagModel("History", R.drawable.atbugate),
         TagModel("Philosophy",R.drawable.atilport),
         TagModel("Exam  Guideline", R.drawable.senateport),
-        TagModel("Management",R.drawable.atbugate),
+        TagModel("Regulations",R.drawable.atbugate),
         TagModel("Entry Demands",  R.drawable.atilport),
         TagModel("Duration Of  Course",   R.drawable.senateport),
         TagModel("Grading System",  R.drawable.atbugate),

@@ -6,14 +6,14 @@
     <string name="tab_text_1">FIRST SEMESTER</string>
     <string name="tab_text_2">SECOND SEMESTER</string>
     <string name="history">string</string>
-    <string name="philosophy">philospph</string>
-    <string name="exam_guide">exam</string>
-    <string name="management">management</string>
-    <string name="entry_demands">entry</string>
-    <string name="course_duration">course</string>
-    <string name="graduation">grad</string>
-    <string name="grading">grading</string>
-    <string name="staff_list">stafflist</string>
+    <string name="philosophy">Philosophy</string>
+    <string name="exam_guide">Exam Guide</string>
+    <string name="Regulations">"Academic Regulations"</string>
+    <string name="entry_demands">Entry Requirements</string>
+    <string name="course_duration">Course Duration</string>
+    <string name="graduation">Graduation Requirements</string>
+    <string name="grading">Grading</string>
+    <string name="staff_list">Staff List</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
