@@ -1,19 +1,65 @@
-p.drop_cap::first-letter {
-  float: left;
-  line-height: 35px;
-  font-size: 55px;
-  font-family: Montserrat;
-  color: #7D3C98;
-  border: solid #D5C5EC;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-right: 5px;
-  padding-left: 5px;
-  margin-right: 5px;
-  margin-bottom: -5px;
+ @font-face{
+
+    font-family: Grant;
+
+    src:url('font/montserrat_regular.ttf');
+
 }
 
 
-p {
-  font-size: 14px;
-}
+
+ p{
+
+        /*color: #4C4C4C;*/
+
+        /*font-style: bold;*/
+
+        font-family: Grant;
+
+    }
+
+
+
+    h2{
+
+    	/*text-decoration: underline */
+
+    	background: #263091;
+
+    	border-radius: 5px;
+
+    	background-margin: 0px;
+
+    	color: #ffffff;
+
+    	text-align: center;
+
+    	font-family: Grant;
+
+
+
+
+
+    }
+
+
+
+    body{
+
+
+
+    	background-repeat: no-repeat;
+
+    	background-blend-mode: lighten;
+
+    	background-color: rgba(255,255,255,0.6);
+
+    	background-attachment: fixed;
+
+    	background-position: center;
+
+
+
+    }
+
+
