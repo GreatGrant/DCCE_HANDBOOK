@@ -37,9 +37,10 @@ class TagDisplayActivity : AppCompatActivity() {
         var webUrl =
             when(position){
                 0 -> "file:///android_asset/History.html"
-                1 -> "file:///android_asset/two_hundred_fs.html"
+                1 -> "file:///android_asset/philosophy.html"
                 2 -> "file:///android_asset/three_hundred_fs.html"
                 3 -> "file:///android_asset/four_hundred_fs.html"
+                4 -> "file:///android_asset/admission_req.html"
                 else ->"file:///android_asset/five_hundred_fs.html"
             }
         webView.loadUrl(webUrl)
