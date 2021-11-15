@@ -14,4 +14,6 @@
     <string name="graduation">grad</string>
     <string name="grading">grading</string>
     <string name="staff_list">stafflist</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

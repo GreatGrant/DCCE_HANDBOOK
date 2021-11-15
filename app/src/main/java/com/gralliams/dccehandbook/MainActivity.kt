@@ -20,6 +20,6 @@ class MainActivity : AppCompatActivity() {
 
         binding.recyclerSyllabus.layoutManager = GridLayoutManager(this, 2)
         binding.recyclerSyllabus.adapter  = SyllabusAdapter(this, Syllabus.syallusList)
-//        webView.loadUrl("file:///android_asset/index.html")
+
     }
 }
