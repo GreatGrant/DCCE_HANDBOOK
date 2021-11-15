@@ -42,7 +42,7 @@
    	        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
    	        <WebView
-   	            android:id="@+id/txt_collapse"
+   	            android:id="@+id/web_collapse"
    	            android:layout_width="match_parent"
    	            android:layout_height="match_parent"
    	            android:layout_marginTop="@dimen/margin_8dp" />

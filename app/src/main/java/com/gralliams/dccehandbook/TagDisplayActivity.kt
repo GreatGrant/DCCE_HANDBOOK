@@ -14,7 +14,7 @@ class TagDisplayActivity : AppCompatActivity() {
         setContentView( binding.root)
 
         setSupportActionBar(binding.toolbar)
-        webView = binding.txtCollapse
+        webView = binding.webCollapse
         supportActionBar?.let { tb ->
             tb.setHomeButtonEnabled(true)
             tb.setDisplayHomeAsUpEnabled(true)
@@ -24,7 +24,7 @@ class TagDisplayActivity : AppCompatActivity() {
         when(position){
             0 -> setText(R.string.history, "file:///android_asset/History.html", R.drawable.ic_undraw_map_re_60yf)
             1 -> setText(R.string.philosophy, "file:///android_asset/philosophy.html", R.drawable.ic_undraw_in_thought_re_qyxl)
-            2 -> setText(R.string.exam_guide,  "file:///android_asset/three_hundred_fs.html", R.drawable.ic_undraw_exams_g_4_ow)
+            2 -> setText(R.string.exam_guide,  "file:///android_asset/exam.html", R.drawable.ic_undraw_exams_g_4_ow)
             3 -> setText(R.string.Regulations, "file:///android_asset/acad_reg.html", R.drawable.undraw_grades_re_j7d6)
             4 -> setText(R.string.entry_demands, "file:///android_asset/admission_req.html",  R.drawable.undraw_pair_programming_re_or4x)
             5 -> setText(R.string.course_duration, "file:///android_asset/five_hundred_fs.html", R.drawable.ic_undraw_visualization_c_2_ps)
