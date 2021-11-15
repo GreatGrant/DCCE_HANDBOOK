@@ -31,13 +31,16 @@ class SyllabusActivity : AppCompatActivity() {
         tabs.setupWithViewPager(viewPager)
 
         var position = intent.getIntExtra(TAG_POSITION, POSITION_NOT_SET)
-//        var webUrl = when(position){
-//            0 -> "file:///android_asset/hundred_fs.html"
-//            1 -> "file:///android_asset/two_hundred_fs.html"
-//            2 -> "file:///android_asset/three_hundred_fs.html"
-//            3 -> "file:///android_asset/four_hundred_fs.html"
-//            4 -> "file:///android_asset/five_hundred_fs.html"
-//        }
+        var title  =
+            when(position){
+                0 ->  "100 Level"
+                1 ->  "200 Level"
+                2 ->  "300 Level"
+                3 ->  "400 Level"
+                else ->"500 Level"
+            }
+        binding.title.text =  title
+
 
     }
 }

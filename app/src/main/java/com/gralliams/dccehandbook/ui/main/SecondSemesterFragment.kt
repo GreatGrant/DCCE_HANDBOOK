@@ -39,7 +39,18 @@ class SecondSemesterFragment : Fragment() {
         val root = binding.root
 
 
-        val webview: WebView = binding.ssWebview
+        val webView: WebView = binding.ssWebview
+        var position = requireActivity().intent.getIntExtra(TAG_POSITION, POSITION_NOT_SET)
+        var webUrl =
+            when(position){
+                0 -> "file:///android_asset/hundred_ss.html"
+                1 -> "file:///android_asset/two_hundred_ss.html"
+                2 -> "file:///android_asset/three_hundred_ss.html"
+                3 -> "file:///android_asset/four_hundred_ss.html"
+                else ->"file:///android_asset/five_hundred_ss.html"
+            }
+        webView.loadUrl(webUrl)
+
 
         return root
     }

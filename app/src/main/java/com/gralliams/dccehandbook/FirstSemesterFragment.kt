@@ -24,8 +24,19 @@ class FirstSemesterFragment : Fragment() {
         _binding = FragmentFirstSemesterBinding.inflate(inflater, container, false)
         val root = _binding!!.root
 
-
         val webView: WebView = _binding!!.fsWebview
+        var position = requireActivity().intent.getIntExtra(TAG_POSITION, POSITION_NOT_SET)
+        var webUrl =
+            when(position){
+            0 -> "file:///android_asset/hundred_fs.html"
+            1 -> "file:///android_asset/two_hundred_fs.html"
+            2 -> "file:///android_asset/three_hundred_fs.html"
+            3 -> "file:///android_asset/four_hundred_fs.html"
+                else ->"file:///android_asset/five_hundred_fs.html"
+            }
+        webView.loadUrl(webUrl)
+
+
 
         return root
 
