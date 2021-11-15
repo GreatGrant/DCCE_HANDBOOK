@@ -22,6 +22,6 @@ object Syllabus{
     var syallusList = arrayListOf(SyllabusModel("100 Level", R.drawable.ic_undraw_begin_chat_re_v0lw),
         SyllabusModel("200 Level", R.drawable.ic_undraw_bibliophile_re_xarc),
         SyllabusModel("300 Level", R.drawable.ic_undraw_lightbulb_moment_re_ulyo),
-                SyllabusModel("400 Level", R.drawable.undraw_programmer_re_owql),
-    SyllabusModel("500 Level", R.drawable.undraw_drone_delivery_re_in95))
+                SyllabusModel("400 Level", R.drawable.undraw_pair_programming_re_or4x),
+    SyllabusModel("500 Level", R.drawable.ic_undraw_certification_aif8))
 }
