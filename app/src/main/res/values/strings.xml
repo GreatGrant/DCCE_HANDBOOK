@@ -5,7 +5,7 @@
     <string name="title_activity_syllabus">SyllabusActivity</string>
     <string name="tab_text_1">FIRST SEMESTER</string>
     <string name="tab_text_2">SECOND SEMESTER</string>
-    <string name="history">string</string>
+    <string name="history">History</string>
     <string name="philosophy">Philosophy</string>
     <string name="exam_guide">Exam Guide</string>
     <string name="Regulations">"Academic Regulations"</string>
