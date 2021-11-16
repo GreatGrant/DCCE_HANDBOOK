@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DCCEHANDBOOK">
-        <activity android:name=".Onboarding.OnboardingActivity"/>
+        <activity android:name=".Onboarding.OnboardingActivity"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar"/>
         <activity
             android:name=".SyllabusActivity"
             android:label="@string/title_activity_syllabus"
