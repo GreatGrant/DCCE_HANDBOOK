@@ -12,7 +12,7 @@ object Tag {
         TagModel("Regulations",R.drawable.atbugate),
         TagModel("Entry Demands",  R.drawable.atilport),
         TagModel("Duration Of  Course",   R.drawable.senateport),
-        TagModel("Graduation Condition",  R.drawable.atilport),
+        TagModel("Curriculum",  R.drawable.atilport),
         TagModel("Grading System",  R.drawable.atbugate),
         TagModel("Staff List", R.drawable.senateport))
 }
