@@ -5,14 +5,15 @@ class TagModel(var title: String,var image: Int) {
 }
 
 object Tag {
-    var tagList  = arrayListOf(TagModel("History", R.drawable.atbugate),
+    var tagList  = arrayListOf(
+        TagModel("History", R.drawable.atbugate),
         TagModel("Philosophy",R.drawable.atilport),
         TagModel("Exam  Guideline", R.drawable.senateport),
         TagModel("Regulations",R.drawable.atbugate),
         TagModel("Entry Demands",  R.drawable.atilport),
         TagModel("Duration Of  Course",   R.drawable.senateport),
-        TagModel("Grading System",  R.drawable.atbugate),
         TagModel("Graduation Condition",  R.drawable.atilport),
+        TagModel("Grading System",  R.drawable.atbugate),
         TagModel("Staff List", R.drawable.senateport))
 }
 
