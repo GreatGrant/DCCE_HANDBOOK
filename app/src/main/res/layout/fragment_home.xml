@@ -11,12 +11,12 @@
         android:id="@+id/recyclerSyllabus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:spanCount="2"
         tools:listitem="@layout/syllabus_item_layout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
