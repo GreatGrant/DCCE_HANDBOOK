@@ -6,24 +6,26 @@
     <style name="Theme.DCCEHANDBOOK.NoActionBar" parent="Theme.DCCEHANDBOOK.Base">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowNoTitle">true</item>
-        <item name="android:windowFullscreen">true</item>
+<!--        <item name="android:windowFullscreen">true</item>-->
     </style>
 
     <!-- Default Theme -->
-    <style name="Theme.DCCEHANDBOOK.Base" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.DCCEHANDBOOK.Base" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/color_primary</item>
         <item name="colorPrimaryVariant">@color/color_primary_dark</item>
-        <item name="colorOnPrimary">@color/color_on_primary</item>
+        <item name="colorOnPrimary">@color/color_on_background</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/color_secondary</item>
         <item name="colorSecondaryVariant">@color/color_secondary_dark</item>
         <item name="colorOnSecondary">@color/color_on_secondary</item>
+        <!--        <item name="backgroundColor">#fff</item>-->
+        <!--        <item name="android:textColor">#000</item>-->
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">@color/color_on_primary</item>
         <item name="android:windowLightStatusBar">true</item>
         <item name="toolbarStyle">@style/Theme.DCCEHANDBOOK.Toolbar</item>
-        <item name="android:navigationBarColor">@color/background_material_light</item>
+        <item name="android:navigationBarColor">@color/white</item>
         <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
         <!-- Customize your theme here. -->
         <item name="drawerArrowStyle">@style/Theme.DCCEHANDBOOK.Toolbar.DrawerArrowToggle</item>
@@ -45,13 +47,9 @@
         <item name="color">@color/color_on_background</item>
     </style>
 
-    <style name="Theme.DCCEHANDBOOK.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.DCCEHANDBOOK.AppBarOverlay" parent="ThemeOverlay.AppCompat.DayNight.ActionBar" />
 
-    <style name="Theme.DCCEHANDBOOK.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="Theme.DCCEHANDBOOK.PopupOverlay" parent="ThemeOverlay.AppCompat.DayNight" />
 
-
-
-
- 
 
 </resources>

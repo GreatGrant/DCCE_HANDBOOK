@@ -3,7 +3,7 @@ package com.gralliams.dccehandbook
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.gralliams.dccehandbook.Onboarding.OnboardingActivity
+import com.gralliams.dccehandbook.onboarding.OnboardingActivity
 
 class LauncherActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,7 +19,7 @@ class LauncherActivity : AppCompatActivity() {
         } else {
 
             //TODO: MAKE SPLASH SCREEN LAUNCH BEFORE MAINACTIVITY
-            startActivity(Intent(applicationContext, MainActivity::class.java))
+            startActivity(Intent(applicationContext, HomeActivity::class.java))
         }
         finish()
 

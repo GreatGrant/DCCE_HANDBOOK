@@ -1,11 +1,14 @@
 package com.gralliams.dccehandbook
 
+import android.content.res.Configuration
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebView
+import androidx.webkit.WebSettingsCompat
+import androidx.webkit.WebViewFeature
 import com.gralliams.dccehandbook.databinding.FragmentFirstSemesterBinding
 
 
@@ -25,6 +28,24 @@ class FirstSemesterFragment : Fragment() {
         val root = _binding!!.root
 
         val webView: WebView = _binding!!.fsWebview
+
+        if (WebViewFeature.isFeatureSupported(WebViewFeature.FORCE_DARK)) {
+            when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
+                Configuration.UI_MODE_NIGHT_YES -> {
+                    WebSettingsCompat.setForceDark(webView.settings,
+                        WebSettingsCompat.FORCE_DARK_ON
+                    )
+                }
+                Configuration.UI_MODE_NIGHT_NO, Configuration.UI_MODE_NIGHT_UNDEFINED -> {
+                    WebSettingsCompat.setForceDark(webView.settings,
+                        WebSettingsCompat.FORCE_DARK_OFF
+                    )
+                }
+                else -> {
+                    //
+                }
+            }
+        }
         var position = requireActivity().intent.getIntExtra(TAG_POSITION, POSITION_NOT_SET)
         var webUrl =
             when(position){

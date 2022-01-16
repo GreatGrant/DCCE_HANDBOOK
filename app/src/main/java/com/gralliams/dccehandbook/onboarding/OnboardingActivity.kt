@@ -1,4 +1,4 @@
-package com.gralliams.dccehandbook.Onboarding
+package com.gralliams.dccehandbook.onboarding
 
 import android.content.Intent
 import android.graphics.Color
@@ -6,29 +6,32 @@ import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
-import androidx.viewpager.widget.ViewPager
-import com.gralliams.dccehandbook.MainActivity
+import com.gralliams.dccehandbook.HomeActivity
 import com.gralliams.dccehandbook.R
+import com.gralliams.dccehandbook.databinding.ActivityOnboardingBinding
 
 
 class OnboardingActivity : AppCompatActivity() {
-    private lateinit var viewPager: ViewPager
     private lateinit var onboardingAdapter: OnboardingAdapter
+    private lateinit var binding: ActivityOnboardingBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_onboarding)
         makeStatusbarTransparent()
-        viewPager = findViewById(R.id.onboarding_view_pager)
+        binding = ActivityOnboardingBinding.inflate(layoutInflater)
+        var view = binding.root
+        setContentView(view)
+
+
         onboardingAdapter = OnboardingAdapter(this)
-        viewPager.adapter = onboardingAdapter
-        viewPager.setPageTransformer(false, OnboardingPageTransformer())
+        binding.onboardingViewPager.adapter = onboardingAdapter
+        binding.onboardingViewPager.setPageTransformer(false, OnboardingPageTransformer())
     }
 
     // Listener for next button press
     fun nextPage(view: View) {
         if (view.id == R.id.button2) {
-            if (viewPager.currentItem < onboardingAdapter.count - 1) {
-                viewPager.setCurrentItem(viewPager.currentItem + 1, true)
+            if (binding.onboardingViewPager.currentItem < onboardingAdapter.count - 1) {
+                binding.onboardingViewPager.setCurrentItem(binding.onboardingViewPager.currentItem + 1, true)
             }
         }
     }
@@ -43,7 +46,7 @@ class OnboardingActivity : AppCompatActivity() {
 
     fun GetStarted(view: View?) {
 
-        val i = Intent(applicationContext, MainActivity::class.java)
+        val i = Intent(applicationContext, HomeActivity::class.java)
         startActivity(i)
         finish()
     }

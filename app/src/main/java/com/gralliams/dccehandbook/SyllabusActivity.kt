@@ -22,6 +22,8 @@ class SyllabusActivity : AppCompatActivity() {
         binding = ActivitySyllabusBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
+
         val sectionsPagerAdapter = SectionsPagerAdapter( supportFragmentManager)
         val viewPager: ViewPager = binding.viewPager
         sectionsPagerAdapter.addFragment(FirstSemesterFragment(), getString(R.string.tab_text_1))
@@ -30,9 +32,8 @@ class SyllabusActivity : AppCompatActivity() {
         val tabs: TabLayout = binding.tabs
         tabs.setupWithViewPager(viewPager)
 
-        var position = intent.getIntExtra(TAG_POSITION, POSITION_NOT_SET)
-        var title  =
-            when(position){
+        val title  =
+            when(intent.getIntExtra(TAG_POSITION, POSITION_NOT_SET)){
                 0 ->  "100 Level"
                 1 ->  "200 Level"
                 2 ->  "300 Level"

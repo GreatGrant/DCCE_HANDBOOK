@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@+id/mobile_navigation"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.gralliams.dccehandbook.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_philosophy"
+        android:name="com.gralliams.dccehandbook.ui.philosophy.PhilosophyFragment"
+        android:label="Philosophy"
+        tools:layout="@layout/fragment_philosophy" />
+
+    <fragment
+        android:id="@+id/nav_history"
+        android:name="com.gralliams.dccehandbook.ui.history.HistoryFragment"
+        android:label="History"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/nav_exam"
+        android:name="com.gralliams.dccehandbook.ui.exam.ExamFragment"
+        android:label="Examination Guide"
+        tools:layout="@layout/fragment_exams" />
+    <fragment
+        android:id="@+id/nav_regulation"
+        android:name="com.gralliams.dccehandbook.ui.academic.AcademicFragment"
+        android:label="Academic Regulations"
+        tools:layout="@layout/fragment_academic" />
+    <fragment
+        android:id="@+id/nav_admission_req"
+        android:name="com.gralliams.dccehandbook.ui.admission.AdmissionFragment"
+        android:label="Admission Requirements"
+        tools:layout="@layout/fragment_admission" />
+    <fragment
+        android:id="@+id/nav_duration"
+        android:name="com.gralliams.dccehandbook.ui.duration.DurationFragment"
+        android:label="Course Duration" />
+    <fragment
+        android:id="@+id/nav_curriculum"
+        android:name="com.gralliams.dccehandbook.ui.curriculum.curriculum.CurriculumFragment"
+        android:label="Curriculum" />
+    <fragment
+        android:id="@+id/nav_grading"
+        android:name="com.gralliams.dccehandbook.ui.grading.GradingFragment"
+        android:label="Grading" />
+    <fragment
+        android:id="@+id/nav_staff"
+        android:name="com.gralliams.dccehandbook.ui.staff.StaffFragment"
+        android:label="Staff" />
+</navigation>

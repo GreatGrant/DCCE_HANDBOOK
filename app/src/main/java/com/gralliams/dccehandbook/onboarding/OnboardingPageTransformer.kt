@@ -1,4 +1,4 @@
-package com.gralliams.dccehandbook.Onboarding
+package com.gralliams.dccehandbook.onboarding
 
 import android.view.View
 import androidx.viewpager.widget.ViewPager

@@ -1,5 +1,6 @@
 package com.gralliams.dccehandbook.ui.main
 
+import android.content.res.Configuration
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,8 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.webkit.WebSettingsCompat
+import androidx.webkit.WebViewFeature
 import com.gralliams.dccehandbook.POSITION_NOT_SET
 import com.gralliams.dccehandbook.R
 import com.gralliams.dccehandbook.TAG_POSITION
@@ -40,9 +43,25 @@ class SecondSemesterFragment : Fragment() {
 
 
         val webView: WebView = binding.ssWebview
-        var position = requireActivity().intent.getIntExtra(TAG_POSITION, POSITION_NOT_SET)
-        var webUrl =
-            when(position){
+        if (WebViewFeature.isFeatureSupported(WebViewFeature.FORCE_DARK)) {
+            when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
+                Configuration.UI_MODE_NIGHT_YES -> {
+                    WebSettingsCompat.setForceDark(webView.settings,
+                        WebSettingsCompat.FORCE_DARK_ON
+                    )
+                }
+                Configuration.UI_MODE_NIGHT_NO, Configuration.UI_MODE_NIGHT_UNDEFINED -> {
+                    WebSettingsCompat.setForceDark(webView.settings,
+                        WebSettingsCompat.FORCE_DARK_OFF
+                    )
+                }
+                else -> {
+                    //
+                }
+            }
+        }
+        val webUrl =
+            when(requireActivity().intent.getIntExtra(TAG_POSITION, POSITION_NOT_SET)){
                 0 -> "file:///android_asset/hundred_ss.html"
                 1 -> "file:///android_asset/two_hundred_ss.html"
                 2 -> "file:///android_asset/three_hundred_ss.html"

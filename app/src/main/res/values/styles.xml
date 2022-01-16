@@ -8,4 +8,8 @@
 
     <style name="MyCardView">
         <![CDATA[<style name="MyCardView">          <item name="cardPreventCornerOverlap">true</item>          <item name="cardUseCompatPadding">true</item>          <item name="android:clickable">true</item>          <item name="android:focusable">true</item>          <item name="cardElevation">0.5dp</item>          <item name="cardBackgroundColor">@color/white</item>          <item name="android:foreground">?attr/selectableItemBackground</item>   </style>   ]]></style>
+
+    <style name="roundedImage">
+        <item name="cornerSize">50%</item>
+    </style>
 </resources>
