@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="abhaya">
-        <item name="android:fontFamily"> @font/abhaya_libre  </item>
-        <item name="font"> @font/abhaya_libre</item>
-    </style>
 
     <style name="MyCardView">
         <![CDATA[<style name="MyCardView">          <item name="cardPreventCornerOverlap">true</item>          <item name="cardUseCompatPadding">true</item>          <item name="android:clickable">true</item>          <item name="android:focusable">true</item>          <item name="cardElevation">0.5dp</item>          <item name="cardBackgroundColor">@color/white</item>          <item name="android:foreground">?attr/selectableItemBackground</item>   </style>   ]]></style>
 
     <style name="roundedImage">
         <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="montserat_text_style">
+        <item name="fontFamily">@font/montserrat_regular</item>
     </style>
 </resources>

@@ -46,7 +46,6 @@
             android:id="@+id/syllabusDescription"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            style="@style/abhaya"
             android:text="TextView"
             android:textAlignment="center"
             android:textColor="@color/white"

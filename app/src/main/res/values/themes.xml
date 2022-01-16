@@ -45,6 +45,7 @@
 
     <style name="Theme.DCCEHANDBOOK.Toolbar.DrawerArrowToggle" parent="Widget.AppCompat.DrawerArrowToggle">
         <item name="color">@color/color_on_background</item>
+        <item name="fontFamily">@font/montserrat_regular</item>
     </style>
 
     <style name="Theme.DCCEHANDBOOK.AppBarOverlay" parent="ThemeOverlay.AppCompat.DayNight.ActionBar" />

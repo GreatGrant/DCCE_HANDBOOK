@@ -9,13 +9,13 @@
             android:icon="@drawable/ic_baseline_home_24"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_philosophy"
-            android:icon="@drawable/ic_baseline_sticky_note_2_24"
-            android:title="Philosophy" />
-        <item
             android:id="@+id/nav_history"
             android:icon="@drawable/ic_baseline_history_edu_24"
             android:title="History" />
+        <item
+            android:id="@+id/nav_philosophy"
+            android:icon="@drawable/ic_baseline_sticky_note_2_24"
+            android:title="Philosophy" />
 
         <item
             android:id="@+id/nav_exam"
