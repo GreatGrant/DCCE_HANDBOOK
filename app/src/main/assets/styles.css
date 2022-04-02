@@ -72,13 +72,7 @@ tr:hover {
 .rounded-image{
             border-radius: 50%;
             align:center;
+            background-color: #263091;
+            border: 20px solid #263092;
         }
 
-        .container{
-            border-color: blue;
-            border-width: 20px;
-            background-color: #263091;
-            border-radius: 50px;
-            width: 200px;
-            margin:30px
-        }
