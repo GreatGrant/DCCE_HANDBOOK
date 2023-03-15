@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.*
 import android.webkit.WebSettings
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.webkit.WebSettingsCompat
 import androidx.webkit.WebViewFeature
 import com.gralliams.dccehandbook.databinding.FragmentDurationBinding
@@ -20,7 +21,7 @@ class DurationFragment : Fragment() {
     ): View? {
 
         this.binding = FragmentDurationBinding.inflate(inflater, container, false)
-
+        viewModel = ViewModelProvider(this)[DurationViewModel::class.java]
         binding.webDuration.settings.cacheMode = WebSettings.LOAD_CACHE_ELSE_NETWORK;
 
         if(WebViewFeature.isFeatureSupported(WebViewFeature.ALGORITHMIC_DARKENING)) {

@@ -11,7 +11,6 @@ import com.gralliams.dccehandbook.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
 
-    private lateinit var homeViewModel: HomeViewModel
     private lateinit var binding: FragmentHomeBinding
 
     override fun onCreateView(
@@ -19,8 +18,6 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        homeViewModel =
-            ViewModelProvider(this)[HomeViewModel::class.java]
 
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         binding.recyclerSyllabus.layoutManager = GridLayoutManager(requireContext(), 2)
