@@ -1,6 +1,5 @@
 package com.gralliams.dccehandbook.ui.admission
 
-import android.content.res.Configuration
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -15,7 +14,7 @@ import com.gralliams.dccehandbook.databinding.FragmentAdmissionBinding
 
 class AdmissionFragment : Fragment() {
 
-    private lateinit var mAdmisionViewModel: AdmisionViewModel
+    private lateinit var mAdmisionViewModel: AdmissionViewModel
     private lateinit var binding: FragmentAdmissionBinding
 
     override fun onCreateView(
@@ -26,7 +25,7 @@ class AdmissionFragment : Fragment() {
 
 
         mAdmisionViewModel =
-            ViewModelProvider(this)[AdmisionViewModel::class.java]
+            ViewModelProvider(this)[AdmissionViewModel::class.java]
 
         this.binding = FragmentAdmissionBinding.inflate(inflater, container, false)
         val root: View = this.binding.root

@@ -11,7 +11,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.webkit.WebSettingsCompat
 import androidx.webkit.WebViewFeature
 import com.gralliams.dccehandbook.databinding.FragmentHistoryBinding
-import com.gralliams.dccehandbook.ui.admission.AdmisionViewModel
 
 class HistoryFragment : Fragment() {
 
