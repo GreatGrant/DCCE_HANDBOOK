@@ -12,11 +12,7 @@ import com.gralliams.dccehandbook.databinding.FragmentHomeBinding
 class HomeFragment : Fragment() {
 
     private lateinit var homeViewModel: HomeViewModel
-    private var _binding: FragmentHomeBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
+    private lateinit var binding: FragmentHomeBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,25 +22,9 @@ class HomeFragment : Fragment() {
         homeViewModel =
             ViewModelProvider(this)[HomeViewModel::class.java]
 
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        binding = FragmentHomeBinding.inflate(inflater, container, false)
         binding.recyclerSyllabus.layoutManager = GridLayoutManager(requireContext(), 2)
         binding.recyclerSyllabus.adapter  = SyllabusAdapter(requireContext(), Syllabus.syallusList)
-        return root
-    }
-
-//    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-//        inflater.inflate(R.menu.menu_main, menu)
-//    }
-
-
-
-
-
-//   m
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+        return binding.root
     }
 }
