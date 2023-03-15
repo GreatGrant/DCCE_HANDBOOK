@@ -3,6 +3,7 @@ package com.gralliams.dccehandbook.ui.staff
 import android.content.res.Configuration
 import android.os.Bundle
 import android.view.*
+import android.webkit.WebSettings
 import androidx.fragment.app.Fragment
 import androidx.webkit.WebSettingsCompat
 import androidx.webkit.WebViewFeature
@@ -24,36 +25,16 @@ class StaffFragment : Fragment() {
 
         _binding = FragmentStaffBinding.inflate(inflater, container, false)
 
-        if (WebViewFeature.isFeatureSupported(WebViewFeature.FORCE_DARK)) {
-            when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
-                Configuration.UI_MODE_NIGHT_YES -> {
-                    WebSettingsCompat.setForceDark(binding.webStaff.settings,
-                        WebSettingsCompat.FORCE_DARK_ON
-                    )
-                }
-                Configuration.UI_MODE_NIGHT_NO, Configuration.UI_MODE_NIGHT_UNDEFINED -> {
-                    WebSettingsCompat.setForceDark(binding.webStaff.settings,
-                        WebSettingsCompat.FORCE_DARK_OFF
-                    )
-                }
-                else -> {
-                    //
-                }
-            }
+        val webView =  binding.webStaff
+        webView.settings.cacheMode = WebSettings.LOAD_CACHE_ELSE_NETWORK;
+        if(WebViewFeature.isFeatureSupported(WebViewFeature.ALGORITHMIC_DARKENING)) {
+            WebSettingsCompat.setAlgorithmicDarkeningAllowed(webView.settings, true);
         }
 
-        binding.webStaff.loadUrl("file:///android_asset/staff.html")
+
+        webView.loadUrl("file:///android_asset/staff.html")
         return binding.root
     }
 
 
-
-
-
-//   m
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
 }
