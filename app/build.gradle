@@ -1,23 +1,21 @@
 plugins {
     id 'com.android.application'
-    id 'kotlin-android'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
 
 android {
-    compileSdkVersion 33
+    namespace 'com.gralliams.dccehandbook'
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.gralliams.dccehandbook"
-        minSdkVersion 23
-        targetSdkVersion 33
+        minSdk 24
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-    }
-
-    buildFeatures {
-        viewBinding true
     }
 
     buildTypes {
@@ -33,26 +31,43 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    namespace 'com.gralliams.dccehandbook'
+
+    buildFeatures {
+        dataBinding true
+        viewBinding true
+    }
+
 }
 
 dependencies {
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    def nav_version = "2.5.3"
+    def glide_version = "4.15.0"
+    def paging_version = "3.1.1"
+    def lifecycle_version = "2.6.0"
+    def lottieVersion = "6.0.0"
+
+    implementation "com.airbnb.android:lottie:$lottieVersion"
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    // LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    // Lifecycles only (without ViewModel or LiveData)
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+
+    // Saved state module for ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version"
+    implementation 'com.jakewharton.timber:timber:5.0.1'
+    implementation "androidx.paging:paging-runtime:$paging_version"
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+    implementation "com.github.bumptech.glide:glide:$glide_version"
     implementation 'androidx.core:core-ktx:1.9.0'
-    // Circle Indicator (To fix the xml preview "Missing classes" error)
-//    implementation 'me.relex:circleindicator:2.1.6'
-    //carousel
-//    implementation 'org.imaginativeworld.whynotimagecarousel:whynotimagecarousel:2.0.5'
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'androidx.webkit:webkit:1.6.0'
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.0'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.0'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+    testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 }
