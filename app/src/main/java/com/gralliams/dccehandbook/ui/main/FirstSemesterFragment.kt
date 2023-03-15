@@ -1,4 +1,4 @@
-package com.gralliams.dccehandbook
+package com.gralliams.dccehandbook.ui.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,6 +9,8 @@ import android.webkit.WebSettings
 import android.webkit.WebView
 import androidx.webkit.WebSettingsCompat
 import androidx.webkit.WebViewFeature
+import com.gralliams.dccehandbook.POSITION_NOT_SET
+import com.gralliams.dccehandbook.TAG_POSITION
 import com.gralliams.dccehandbook.databinding.FragmentFirstSemesterBinding
 
 
@@ -24,8 +26,6 @@ class FirstSemesterFragment : Fragment() {
 
         val webView: WebView = binding.fsWebview
         webView.settings.cacheMode = WebSettings.LOAD_CACHE_ELSE_NETWORK;
-
-
 
         if(WebViewFeature.isFeatureSupported(WebViewFeature.ALGORITHMIC_DARKENING)) {
             WebSettingsCompat.setAlgorithmicDarkeningAllowed(webView.settings, true);

@@ -1,15 +1,12 @@
 package com.gralliams.dccehandbook
 
 import android.os.Bundle
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.tabs.TabLayout
 import androidx.viewpager.widget.ViewPager
 import androidx.appcompat.app.AppCompatActivity
-import android.view.Menu
-import android.view.MenuItem
 import com.gralliams.dccehandbook.ui.main.SectionsPagerAdapter
 import com.gralliams.dccehandbook.databinding.ActivitySyllabusBinding
+import com.gralliams.dccehandbook.ui.main.FirstSemesterFragment
 import com.gralliams.dccehandbook.ui.main.SecondSemesterFragment
 
 class SyllabusActivity : AppCompatActivity() {
