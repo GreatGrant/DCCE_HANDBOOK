@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.gralliams.dccehandbook.adapters.SyllabusAdapter
 import com.gralliams.dccehandbook.databinding.ActivityMainBinding
 
 

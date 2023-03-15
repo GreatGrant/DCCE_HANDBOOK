@@ -1,10 +1,13 @@
-package com.gralliams.dccehandbook
+package com.gralliams.dccehandbook.adapters
 
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.gralliams.dccehandbook.TAG_POSITION
+import com.gralliams.dccehandbook.TagDisplayActivity
+import com.gralliams.dccehandbook.TagModel
 import com.gralliams.dccehandbook.databinding.TagItemLayoutBinding
 
 class TagsAdapter(var context: Context, private val tagItems: ArrayList<TagModel> ) : RecyclerView.Adapter<TagsAdapter.TagViewHolder>() {

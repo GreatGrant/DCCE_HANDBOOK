@@ -1,4 +1,4 @@
-package com.gralliams.dccehandbook.ui.curriculum.curriculum
+package com.gralliams.dccehandbook.ui.curriculum
 
 import android.content.res.Configuration
 import android.os.Bundle

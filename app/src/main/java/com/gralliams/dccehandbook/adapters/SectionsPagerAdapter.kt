@@ -1,4 +1,4 @@
-package com.gralliams.dccehandbook.ui.main
+package com.gralliams.dccehandbook.adapters
 
 import android.content.Context
 import androidx.fragment.app.Fragment

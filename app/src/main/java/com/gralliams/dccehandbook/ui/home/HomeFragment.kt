@@ -1,18 +1,12 @@
 package com.gralliams.dccehandbook.ui.home
 
-import android.content.Intent
-import android.content.res.Configuration
 import android.os.Bundle
 import android.view.*
-import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
-import com.gralliams.dccehandbook.AboutActivity
-import com.gralliams.dccehandbook.R
 import com.gralliams.dccehandbook.Syllabus
-import com.gralliams.dccehandbook.SyllabusAdapter
+import com.gralliams.dccehandbook.adapters.SyllabusAdapter
 import com.gralliams.dccehandbook.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {

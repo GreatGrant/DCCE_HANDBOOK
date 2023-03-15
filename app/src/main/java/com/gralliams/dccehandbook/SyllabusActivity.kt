@@ -4,7 +4,7 @@ import android.os.Bundle
 import com.google.android.material.tabs.TabLayout
 import androidx.viewpager.widget.ViewPager
 import androidx.appcompat.app.AppCompatActivity
-import com.gralliams.dccehandbook.ui.main.SectionsPagerAdapter
+import com.gralliams.dccehandbook.adapters.SectionsPagerAdapter
 import com.gralliams.dccehandbook.databinding.ActivitySyllabusBinding
 import com.gralliams.dccehandbook.ui.main.FirstSemesterFragment
 import com.gralliams.dccehandbook.ui.main.SecondSemesterFragment

@@ -1,11 +1,13 @@
-package com.gralliams.dccehandbook
+package com.gralliams.dccehandbook.adapters
 
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.gralliams.dccehandbook.SyllabusActivity
+import com.gralliams.dccehandbook.SyllabusModel
+import com.gralliams.dccehandbook.TAG_POSITION
 import com.gralliams.dccehandbook.databinding.SyllabusItemLayoutBinding
 
 class SyllabusAdapter(var context: Context,var syllabusItem: ArrayList<SyllabusModel> ) : RecyclerView.Adapter<SyllabusAdapter.SyllabusViewHolder>() {

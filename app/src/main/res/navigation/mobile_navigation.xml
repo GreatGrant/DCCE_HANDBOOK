@@ -43,7 +43,7 @@
         android:label="Course Duration" />
     <fragment
         android:id="@+id/nav_curriculum"
-        android:name="com.gralliams.dccehandbook.ui.curriculum.curriculum.CurriculumFragment"
+        android:name="com.gralliams.dccehandbook.ui.curriculum.CurriculumFragment"
         android:label="Curriculum" />
     <fragment
         android:id="@+id/nav_grading"
