@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.WebSettings
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -15,11 +16,8 @@ import com.gralliams.dccehandbook.databinding.FragmentHistoryBinding
 class HistoryFragment : Fragment() {
 
     private lateinit var historyViewModel: HistoryViewModel
-    private var _binding: FragmentHistoryBinding? = null
+    private lateinit var binding: FragmentHistoryBinding
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -31,34 +29,18 @@ class HistoryFragment : Fragment() {
         historyViewModel =
             ViewModelProvider(this)[HistoryViewModel::class.java]
 
-        _binding = FragmentHistoryBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-        if (WebViewFeature.isFeatureSupported(WebViewFeature.FORCE_DARK)) {
-            when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
-                Configuration.UI_MODE_NIGHT_YES -> {
-                    WebSettingsCompat.setForceDark(binding.webHistory.settings,
-                        WebSettingsCompat.FORCE_DARK_ON
-                    )
-                }
-                Configuration.UI_MODE_NIGHT_NO, Configuration.UI_MODE_NIGHT_UNDEFINED -> {
-                    WebSettingsCompat.setForceDark(binding.webHistory.settings,
-                        WebSettingsCompat.FORCE_DARK_OFF
-                    )
-                }
-                else -> {
-                    //
-                }
-            }
+        binding = FragmentHistoryBinding.inflate(inflater, container, false)
+        var webView = binding.webHistory
+
+        webView.settings.cacheMode = WebSettings.LOAD_CACHE_ELSE_NETWORK;
+        if(WebViewFeature.isFeatureSupported(WebViewFeature.ALGORITHMIC_DARKENING)) {
+            WebSettingsCompat.setAlgorithmicDarkeningAllowed(webView.settings, true);
         }
-        val webView = binding.webHistory
+
         historyViewModel.text.observe(viewLifecycleOwner, Observer {
             webView.loadUrl(it)
         })
-        return root
+        return binding.root
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
 }
