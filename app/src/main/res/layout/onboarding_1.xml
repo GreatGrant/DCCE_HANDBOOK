@@ -116,7 +116,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/sarabun_regular"
-        android:text="Detailed information on all courses offered"
+        android:text="@string/syllabus_info"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="16sp"

@@ -30,4 +30,6 @@
     <string name="explore">Explore</string>
     <string name="day_night">Day Night</string>
     <string name="about">About</string>
+    <string name="syllabus_info">Get detailed information on all courses offered</string>
+    <string name="curriculum_info">Get all course codes, course titles, course units, and structures.</string>
 </resources>
